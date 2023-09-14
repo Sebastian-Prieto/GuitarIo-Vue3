@@ -1,6 +1,6 @@
 <script setup>
 // Agregando el setup decimos que es Composition API
-import { reactive, ref, onMounted } from 'vue' // Manejo de estados
+import { reactive, ref, onMounted, watch } from 'vue' // Manejo de estados
 import { db } from './data/guitarras'
 import Guitarra from './components/Guitarra.vue'
 import Header from './components/Header.vue'
@@ -9,6 +9,8 @@ import Footer from './components/Footer.vue'
 const guitarras = ref([])
 const carrito = ref([])
 const guitarraPrincipal = ref({})
+
+watch()
 
 onMounted(() => {
     guitarras.value = db;
